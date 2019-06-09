@@ -19,9 +19,11 @@ def genlists(yearlb, yearub):
 
 def findcalendars(year, yearlb, yearub):
     buckets = genlists(yearlb, yearub)
+    years =[]
     for bucket in buckets:
         if year in bucket:
-            return bucket
+            years = bucket
+    return years
 
 #print groups of years that can share calendar (1900-2100)
 calendars = genlists(1900, 2100)
